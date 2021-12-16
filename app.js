@@ -31,8 +31,6 @@ routes[3].path = getPath(3).reverse();
 let index = 0;
 wsServer.on('connection', socket => {
   let sendPoint = (routeId) => {
-    console.log('findex')
-    console.log(index)
     client.connect(async err => {
        
       const collection = await client.db("routes").collection("routes");
